@@ -21,12 +21,12 @@ public class SwipeControls : MonoBehaviour {
 
 	void OnMouseUp() {
 
-	/*	isRight = false;
-		isLeft = false;
-		isUp = false;
-		isDown = false;*/
+        isRight = false;
+        isLeft = false;
+        isUp = false;
+        isDown = false;
 
-		upX = Input.mousePosition.x;
+        upX = Input.mousePosition.x;
 		upY = Input.mousePosition.y;
 
 		float distX = Mathf.Abs(Mathf.Abs (downX) - Mathf.Abs (upX));
@@ -37,9 +37,9 @@ public class SwipeControls : MonoBehaviour {
 			isVert = false;
 			if (downX - upX < 0 ) {
 				isRight = true;
-				isLeft = false;
+				/*isLeft = false;
 				isUp = false;
-				isDown = false;
+				isDown = false;*/
 			}
 			else if (downX - upX > 0) {
 				isRight = false;
@@ -50,15 +50,15 @@ public class SwipeControls : MonoBehaviour {
 		} else if (distX < distY) {
 			isVert = true;
 			if (downY - upY < 0 ) {
-				isRight = false;
-				isLeft = false;
+				/*isRight = false;
+				isLeft = false;*/
 				isUp = true;
-				isDown = false;
+				//isDown = false;
 			}
 			else if (downY - upY > 0 ) {
-				isRight = false;
+				/*isRight = false;
 				isLeft = false;
-				isUp = false;
+				isUp = false;*/
 				isDown = true;
 			}
 		}
