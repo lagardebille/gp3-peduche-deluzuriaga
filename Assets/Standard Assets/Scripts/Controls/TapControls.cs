@@ -27,26 +27,41 @@ public class TapControls : MonoBehaviour {
 			float distY = Mathf.Abs (mPos.y - snakeHead.position.y);
 
 			if (distX > distY) {
-				if (mPos.x > snakeHead.position.x && snakeHead.GetComponent<Snake> ().dirWhere != 4) {
+				if (mPos.x > snakeHead.position.x && snakeHead.GetComponent<Snake> ().dirWhere != 4)
+				{
 					direction = "right";
-				} else if (mPos.x < snakeHead.position.x && snakeHead.GetComponent<Snake> ().dirWhere != 3) {
+				} 
+				else if (mPos.x < snakeHead.position.x && snakeHead.GetComponent<Snake> ().dirWhere != 3)
+				{
 					direction = "left";
-				} else {
+				}
+				else {
 					if (mPos.y > snakeHead.position.y && snakeHead.GetComponent<Snake> ().dirWhere != 2) {
 						direction = "up";
-					} else if (mPos.y < snakeHead.position.y && snakeHead.GetComponent<Snake> ().dirWhere != 1) {
+					}
+					else if (mPos.y < snakeHead.position.y && snakeHead.GetComponent<Snake> ().dirWhere != 1)
+					{
 						direction = "down";
 					}
 				}
-			} else if (distX < distY) {
-				if (mPos.y > snakeHead.position.y && snakeHead.GetComponent<Snake> ().dirWhere != 2) {
+			} 
+			else if (distX < distY)
+			{
+				if (mPos.y > snakeHead.position.y && snakeHead.GetComponent<Snake> ().dirWhere != 2) 
+				{
 					direction = "up";
-				} else if (mPos.y < snakeHead.position.y && snakeHead.GetComponent<Snake> ().dirWhere != 1) {
+				} 
+				else if (mPos.y < snakeHead.position.y && snakeHead.GetComponent<Snake> ().dirWhere != 1) 
+				{
 					direction = "down";
-				} else {
-					if (mPos.x > snakeHead.position.x && snakeHead.GetComponent<Snake> ().dirWhere != 4) {
+				} else 
+				{
+					if (mPos.x > snakeHead.position.x && snakeHead.GetComponent<Snake> ().dirWhere != 4) 
+					{
 						direction = "right";
-					} else if (mPos.x < snakeHead.position.x && snakeHead.GetComponent<Snake> ().dirWhere != 3) {
+					} 
+					else if (mPos.x < snakeHead.position.x && snakeHead.GetComponent<Snake> ().dirWhere != 3) 
+					{
 						direction = "left";
 					}
 				}
