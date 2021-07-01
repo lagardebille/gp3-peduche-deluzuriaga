@@ -36,29 +36,24 @@ public class SwipeControls : MonoBehaviour {
 		if (distX > distY) {
 			isVert = false;
 			if (downX - upX < 0 ) {
+
 				isRight = true;
-				/*isLeft = false;
-				isUp = false;
-				isDown = false;*/
+			
 			}
 			else if (downX - upX > 0) {
-				isRight = false;
+				
 				isLeft = true;
-				isUp = false;
-				isDown = false;
+				
 			}
 		} else if (distX < distY) {
 			isVert = true;
 			if (downY - upY < 0 ) {
-				/*isRight = false;
-				isLeft = false;*/
+				
 				isUp = true;
-				//isDown = false;
+				
 			}
 			else if (downY - upY > 0 ) {
-				/*isRight = false;
-				isLeft = false;
-				isUp = false;*/
+				
 				isDown = true;
 			}
 		}
